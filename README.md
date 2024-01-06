@@ -70,3 +70,73 @@ Este projeto utiliza o conjunto de dados disponível no Kaggle. Você pode encon
 
 
 
+# English Version
+
+# Black Friday Sales EDA
+This repository contains a Python script for performing Exploratory Data Analysis (EDA) on the Black Friday sales dataset. The goal is to understand customer purchasing behavior, especially in relation to the purchase amount, for various products across different categories. The dataset was provided by the retail company "ABC Private Limited" and includes information about customers, products, and purchase details from the last month.
+
+### Dataset History
+The company "ABC Private Limited" shared the purchase summary of various customers for high-volume products from the last month. The dataset includes the following details:
+
+- Customer Demographics:
+
+1. Age
+2. Gender
+3. Marital Status
+4. City Type
+5. Current City
+- Product Details:
+1. Product ID
+2. Product Category
+- Purchase Details:
+1. Total Purchase Amount for the Last Month
+
+## Dataset Usage
+1. Download the script and dataset.
+2. Replace df = pd.read_csv() with the path to your CSV file in the corresponding line.
+### Running in Jupyter Notebook
+1. Open Jupyter Notebook in the script directory.
+
+   ```
+   jupyter notebook
+   ```
+2. Open the script in the notebook and execute the cells as needed.
+
+## Basic Dataset Analysis
+The code performs a descriptive statistical analysis of the dataset, displaying summary statistics for each column.
+
+### 1. Missing Values Check
+Identifies and prints the count of missing values per column in the dataset.
+
+### 2. Unique Values Check
+Identifies and prints the count of unique values per column in the dataset.
+
+### 3. Purchase Distribution
+Displays a histogram representing the distribution of purchases in the dataset.
+
+### 4. Outliers Check
+Uses a boxplot to identify and print values considered outliers in the purchase dataset.
+
+### 5. Gender Analysis
+Presents a bar chart showing the total purchases made by each gender.
+
+### 6. Marital Status Analysis
+Displays a bar chart representing the total purchases by marital status.
+
+### 7. Occupation Analysis
+Shows the total purchases made by each occupation through a bar chart.
+
+### 8. Average Purchase by Occupation
+Presents the average purchase for each occupation in a bar chart.
+
+### 9. Purchases by City
+Displays a bar chart representing the total purchases in each city category.
+
+### 10. Purchases by Age Group
+Shows the total purchases made in each age group through a bar chart.
+
+## Note
+Before running the script, make sure to have the correct CSV file in the same directory and adjust the path in the line df = pd.read_csv(). This script was developed for educational purposes and can be customized as needed to meet the specific requirements of your dataset.
+
+## Kaggle Dataset
+This project uses the dataset available on Kaggle. You can find the dataset [here](https://www.kaggle.com/datasets/pranavuikey/black-friday-sales-eda).
