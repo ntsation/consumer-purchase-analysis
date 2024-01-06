@@ -65,7 +65,8 @@ Mostra o total de compras realizado em cada faixa etária através de um gráfic
 
 Antes de executar o script, certifique-se de ter o arquivo CSV correto no mesmo diretório e ajuste o caminho na linha df = pd.read_csv(). Este script foi desenvolvido para fins educacionais e pode ser personalizado conforme necessário para atender aos requisitos específicos do seu conjunto de dados.
 
-
+## Kaggle Dataset
+Este projeto utiliza o conjunto de dados disponível no Kaggle. Você pode encontrar o conjunto de dados [aqui](https://www.kaggle.com/datasets/pranavuikey/black-friday-sales-eda).
 
 
 
