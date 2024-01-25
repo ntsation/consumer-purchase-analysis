@@ -1,25 +1,24 @@
-import pandas as pd 
+import pandas as pd  
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
 
 df = pd.read_csv()
-
-# analise basica do conjunto de dados
+# analise basica do conjunto de dados ---------------------------------------------------------------------------
 desc_stats = df.describe(include='all')
 print(desc_stats)
 
-# verificaçao de valores ausentes
+# verificaçao de valores ausentes -------------------------------------------------------------------------------
 missing_values = df.isnull().sum
 print('Valores Ausuntes por Coluna:')
 print(missing_values)
 
-# verificaçõa de valores exclusivos
+# verificaçõa de valores exclusivos -----------------------------------------------------------------------------
 unique_values = df.nunique()
 print('Valores Exclusivos por Coluna:')
 print(unique_values)
 
-# Distribuição de compras
+# Distribuição de compras ---------------------------------------------------------------------------------------
 plt.figure(figsizee=(10, 6))
 plt.hist(df['Purchase'], bins=30,color='blue', edgecolor='black')
 plt.title('Distribuição de Compras')
@@ -28,7 +27,7 @@ plt.ylabel('Frequencia')
 plt.grid(True)
 plt.show()
 
-# Verificação de outliers
+# Verificação de outliers -----------------------------------------------------------------------------------------
 plt.figure(figsize=(10, 6))
 sns.boxplot(x=df['Purchase'])
 plt.title('Boxplot de Compras')
@@ -52,7 +51,7 @@ print("Limite Superior:", upper_limit)
 print("Número de Outliers:", len(outliers))
 print(outliers)
 
-# analise de genero
+# analise de genero ------------------------------------------------------------------------------------------------
 gender_purchase = df.groupby('Gender')['Purchase'].sum()
 
 plt.figure(figsize=(10, 6))
@@ -62,7 +61,7 @@ plt.xlabel('Gênero')
 plt.ylabel('Total de Compras')
 plt.show()
 
-# analise por estado civil
+# analise por estado civil ------------------------------------------------------------------------------------------
 marital_status_purchase = df.groupby('Marital_Status')['Purchase'].sum()
 
 plt.figure(figsize=(10, 6))
@@ -72,7 +71,7 @@ plt.xlabel('Estado Civil')
 plt.ylabel('Total de Compras')
 plt.show()
 
-# analise por ocupação
+# analise por ocupação ----------------------------------------------------------------------------------------------
 occupation_purchase = df.groupby('Occupation')['Purchase'].sum()
 
 plt.figure(figsize=(14, 6))
@@ -82,7 +81,7 @@ plt.xlabel('Ocupação')
 plt.ylabel('Total de Compras')
 plt.show()
 
-# analise de ocupação vs compra
+# analise de ocupação vs compra ---------------------------------------------------------------------------------------
 avg_purchase_by_occupation = df.groupby('Occupation')['Purchase'].mean()
 
 plt.figure(figsize=(14, 6))
@@ -92,7 +91,7 @@ plt.xlabel('Ocupação')
 plt.ylabel('Média de Compra')
 plt.show()
 
-# analise de compra por cidade
+# analise de compra por cidade ----------------------------------------------------------------------------------------
 city_purchase = df.groupby('City_Category')['Purchase'].sum()
 
 plt.figure(figsize=(10, 6))
@@ -102,7 +101,7 @@ plt.xlabel('Cidade')
 plt.ylabel('Total de Compras')
 plt.show()
 
-# analise de compra por faixa etaria
+# analise de compra por faixa etaria ----------------------------------------------------------------------------------
 age_purchase = df.groupby('Age')['Purchase'].sum()
 
 plt.figure(figsize=(12, 6))
