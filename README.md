@@ -1,83 +1,62 @@
-# EDA de Vendas da Black Friday
+# Purchase Analysis Project
 
-Este repositório contém um Jupyter Notebook em Python para realizar uma Análise Exploratória de Dados (EDA) sobre o conjunto de dados de vendas da Black Friday.
+## Overview
 
-O objetivo é compreender o comportamento de compra do cliente, especialmente em relação ao valor da compra, para diversos produtos de diferentes categorias. O conjunto de dados foi fornecido pela empresa de varejo "ABC Private Limited" e inclui informações sobre clientes, produtos e detalhes das compras do mês passado.
+This project performs a comprehensive analysis of purchase data using Python libraries such as Pandas, Matplotlib, and Seaborn. The analysis includes descriptive statistics, visualizations, and insights into spending patterns based on gender, marital status, occupation, city, and age group.
 
-## Histórico do Conjunto de Dados
+## Table of Contents
 
-A empresa "ABC Private Limited" compartilhou o resumo de compras de vários clientes para produtos de alto volume do mês passado. O conjunto de dados inclui os seguintes detalhes:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data Description](#data-description)
+- [Visualizations](#visualizations)
 
-- Dados Demográficos do Cliente:
-  - . Idade
-  - .Sexo
-  - .Estado Civil
-  - .Tipo de Cidade
-  - .Cidade Atual
+## Installation
 
-- .Detalhes do Produto:
-  - .ID do Produto
+To run this project, ensure you have Python installed along with the following libraries:
 
-  - .Categoria do Produto
+- pandas
+- matplotlib
+- seaborn
 
-- .Detalhes da Compra:
+You can install the required libraries using pip:
 
-  - . Valor Total da Compra do Mês Passado
+```bash
+pip install pandas matplotlib seaborn
+```
 
-### Executando no Jupyter Notebook
+## Usage
 
-1. Abra o Jupyter Notebook no diretório do script.
+1. Clone the repository or download the files.
+2. Place your `train.csv` data file in the `./src/` directory.
+3. Open the Jupyter Notebook and run each cell sequentially to perform the analysis.
 
-2. Abra o script no notebook e execute as células conforme necessário.
+```bash
+jupyter notebook
+```
 
-## Análise Básica do Conjunto de Dados
+4. Follow the instructions and observations provided in the notebook to understand the analysis.
 
-O código realiza uma análise estatística descritiva do conjunto de dados, exibindo estatísticas resumidas para cada coluna.
+## Data Description
 
-- 1. ```Verificação de Valores Ausentes```
+The dataset (`train.csv`) should contain the following columns:
 
-      Identifica e imprime a contagem de valores ausentes por coluna no conjunto de dados.
+- **Purchase**: The purchase amount made by individuals.
+- **Gender**: The gender of the individual (e.g., Male, Female).
+- **Marital_Status**: Marital status of the individual (e.g., Single, Married).
+- **Occupation**: The occupation of the individual.
+- **City_Category**: The category of the city (e.g., A, B, C).
+- **Age**: The age group of the individual.
 
-- 2. ```Verificação de Valores Exclusivos```
+## Visualizations
 
-      Identifica e imprime a contagem de valores exclusivos por coluna no conjunto de dados.
+The analysis includes various visualizations to help understand the data better:
 
-- 3. ```Distribuição de Compras```
-
-      Exibe um histograma que representa a distribuição das compras no conjunto de dados.
-
-- 4. ```Verificação de Outliers```
-
-      Utiliza um boxplot para identificar e imprimir os valores considerados outliers no conjunto de compras.
-
-- 5. ```Análise por Gênero```
-
-      Apresenta um gráfico de barras que mostra o total de compras realizado por cada gênero.
-
-- 6. ```Análise por Estado Civil```
-
-      Exibe um gráfico de barras representando o total de compras por estado civil.
-
-- 7. ```Análise por Ocupação```
-
-      Mostra o total de compras realizado por cada ocupação através de um gráfico de barras.
-
-- 8. ```Média de Compra por Ocupação```
-
-      Apresenta a média de compra para cada ocupação em um gráfico de barras.
-
-- 9. ```Compras por Cidade```
-
-      Exibe um gráfico de barras representando o total de compras em cada categoria de cidade.
-
-- 10. ```Compras por Faixa Etária```
-
-      Mostra o total de compras realizado em cada faixa etária através de um gráfico de barras.
-
-## Nota
-
-Antes de executar o script, certifique-se de ter o arquivo CSV correto no mesmo diretório e caso necessário ajuste o caminho na linha ```df = pd.read_csv()```.
-
-## Kaggle Dataset
-
-Este projeto utiliza o conjunto de dados disponível no Kaggle. Você pode encontrar o conjunto de dados [aqui](https://www.kaggle.com/datasets/pranavuikey/black-friday-sales-eda).
+- **Purchase Distribution**: Histogram showing the distribution of purchase amounts.
+- **Purchase Boxplot**: Boxplot to identify outliers in purchase amounts.
+- **Purchases by Gender**: Bar plot comparing total purchases made by different genders.
+- **Purchases by Marital Status**: Bar plot comparing total purchases based on marital status.
+- **Purchases by Occupation**: Bar plot showing total purchases for each occupation.
+- **Average Purchases by Occupation**: Bar plot showing average purchase amounts by occupation.
+- **Purchases by City**: Bar plot visualizing total purchases by city category.
+- **Purchases by Age Group**: Bar plot comparing total purchases across different age groups.
